@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatHDI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            hdi: '#00A3FF',
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #888; border-radius: 10px; }
+    .dark ::-webkit-scrollbar-thumb { background: #444; }
+
+    /* Markdown styling with improved light mode visibility */
+    .markdown-content { word-break: break-word; }
+    .markdown-content h1 { @apply text-2xl font-bold mb-4 text-gray-900 dark:text-white; }
+    .markdown-content h2 { @apply text-xl font-bold mt-6 mb-3 text-gray-900 dark:text-white; }
+    .markdown-content p { @apply mb-4 leading-relaxed text-[15px] text-gray-800 dark:text-gray-300; }
+    .markdown-content ul { @apply list-disc ml-6 mb-4 space-y-2 text-gray-800 dark:text-gray-300; }
+    .markdown-content code { @apply bg-gray-100 dark:bg-[#2f2f2f] px-1.5 py-0.5 rounded text-sm font-mono text-pink-600 dark:text-pink-400; }
+    .markdown-content pre { @apply bg-gray-50 dark:bg-[#0d0d0d] p-4 rounded-xl border border-gray-200 dark:border-white/5 mb-6 overflow-x-auto; }
+    
+    /* Table Fixes for Light Mode - Extreme visibility */
+    .markdown-content table { 
+      @apply w-full border-collapse mb-6 rounded-lg overflow-hidden border border-gray-400 dark:border-white/20 text-sm text-gray-900 dark:text-gray-200;
+    }
+    .markdown-content th { 
+      @apply text-left p-3 bg-gray-200 dark:bg-white/10 border border-gray-400 dark:border-white/20 font-bold text-gray-900 dark:text-white; 
+    }
+    .markdown-content td { 
+      @apply p-3 border border-gray-400 dark:border-white/20 text-gray-800 dark:text-gray-300; 
+    }
+    .markdown-content tr:nth-child(even) { 
+      @apply bg-gray-100 dark:bg-white/5; 
+    }
+    /* Ensure table text is black in light mode */
+    .markdown-content table * {
+      @apply transition-colors;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "uuid": "https://esm.sh/uuid@^13.0.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "pptxgenjs": "https://esm.sh/pptxgenjs@^3.12.0",
+    "react-markdown": "https://esm.sh/react-markdown@^9.0.0",
+    "remark-gfm": "https://esm.sh/remark-gfm@^4.0.0"
+  }
+}
+</script>
+</head>
+<body class="overflow-hidden bg-white dark:bg-[#212121]">
+  <div id="root"></div>
+</body>
+</html>

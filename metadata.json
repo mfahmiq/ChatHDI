@@ -1,0 +1,8 @@
+{
+  "name": "ChatHDI",
+  "description": "A powerful AI assistant for hydrogen technology and multi-modal creation including PPTX, Images, and Videos.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
